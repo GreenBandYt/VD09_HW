@@ -5,19 +5,19 @@
     <form method="post" action="{{ url_for('register')}}">
         {{ form.hidden_tag() }}
         <div class="form-group">
-            {{ form.username.label(class="form-label") }}
-            {{ form.username(class="form-control") }}
+            <label for="username" class="form-label">Имя пользователя</label>
+            {{ form.username(class="form-control", id="username") }}
         </div>
         <div class="form-group">
-            {{ form.password.label(class="form-label") }}
-            {{ form.password(class="form-control") }}
+            <label for="password" class="form-label">Пароль</label>
+            {{ form.password(class="form-control", id="password") }}
         </div>
         <div class="form-group">
-            {{ form.confirm_password.label(class="form-label") }}
-            {{ form.confirm_password(class="form-control") }}
+            <label for="confirm_password" class="form-label">Подтвердите пароль</label>
+            {{ form.confirm_password(class="form-control", id="confirm_password") }}
         </div>
         <div class="form-group text-center">
-            {{ form.submit(class="btn btn-primary btn-lg") }}
+            {{ form.submit(class="btn btn-primary btn-lg", value="Зарегистрироваться") }}
         </div>
     </form>
 </div>
